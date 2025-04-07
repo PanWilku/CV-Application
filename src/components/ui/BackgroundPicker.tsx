@@ -15,7 +15,7 @@ type BackgroundPickerProps = {
   setPickedBackground: (background: BackgroundItem) => void;
 };
 
-function BackgroundPicker({ backgrounds, pickedBackground, setPickedBackground }: BackgroundPickerProps) {
+function BackgroundPicker({ backgrounds, pickedBackground, setPickedBackground}: BackgroundPickerProps) {
   useEffect(() => {
     console.log("Picked background changed to:", pickedBackground.name);
   }, [pickedBackground]);

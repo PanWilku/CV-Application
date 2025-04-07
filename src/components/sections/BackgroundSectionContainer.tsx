@@ -3,32 +3,31 @@ import { useState } from "react";
 import Button from "../ui/Button";
 import ColorPicker from "../ui/ColorPicker";
 import BackgroundPicker from "../ui/BackgroundPicker";
-import Star from "../../assets/star.svg?react";
-import Wave from "../../assets/wave.svg?react";
-import star from "../../assets/star.svg";
-import wave from "../../assets/wave.svg";
+import {
+  backgrounds
+} from '../../assets';
+import { BackgroundItem } from "../../types";
 
-function BackgroundSectionContainer() {
+
+
+
+type props = {
+  pickedBackground: BackgroundItem;
+  setPickedBackground: (bg: BackgroundItem) => void;
+  hex: string;
+  setHex: (color: string) => void;
+}
+
+
+function BackgroundSectionContainer({pickedBackground, setPickedBackground, hex, setHex}: props) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [showBackgroundPicker, setShowBackgroundPicker] = useState(false);
 
-  const backgrounds = [{
-    id: 1,
-    image: star,
-    svg: Star,
-    name: "Star"
-  },
-{
-    id: 2,
-    image: wave,
-    svg: Wave,
-    name: "Wave"
-}];
 
 
 
-  const [pickedBackground, setPickedBackground] = useState(backgrounds[0]);
+
 
   const handleToggle = () => setIsExpanded((prev) => !prev);
   const handleColorPicker = () => setShowColorPicker((prev) => !prev);
@@ -86,14 +85,14 @@ function BackgroundSectionContainer() {
 
       {showColorPicker && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 m-6 rounded-xl shadow-lg relative">
+          <div className="bg-white p-8 m-6 rounded-xl shadow-lg relative h-3/4">
             <button
               onClick={closePickers}
               className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
             >
               ✕
             </button>
-            <ColorPicker pickedBackground={pickedBackground.svg} />
+            <ColorPicker pickedBackground={pickedBackground.svg} hex={hex} setHex={setHex} />
           </div>
         </div>
       )}

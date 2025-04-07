@@ -6,14 +6,16 @@ type BackgroundComponent = FunctionComponent<SVGProps<SVGSVGElement>>;
 
 type ColorPickerProps = {
   pickedBackground: BackgroundComponent;
+  hex: string;
+  setHex: (color: string) => void
 };
 
-function ColorPicker({ pickedBackground: PickedBackground }: ColorPickerProps) {
-  const [hex, setHex] = useState("");
+function ColorPicker({ pickedBackground: PickedBackground, hex, setHex }: ColorPickerProps) {
+
 
   return (
     <>
-      <div className='flex  flex-col gap-10 items-center'>
+      <div className='flex flex-col gap-10 items-center'>
         <Colorful
           color={hex}
           onChange={(color) => {
@@ -21,9 +23,9 @@ function ColorPicker({ pickedBackground: PickedBackground }: ColorPickerProps) {
             console.log(color.hex);
           }}
         />
-        <div className='flex border-2 w-full aspect-[1/1.414]'>
-          <div className="flex w-full items-end">
-            <PickedBackground className="flex w-full" style={{ color: hex }} />
+        <div className='flex border-2 aspect-[1/1.414] w-1/2'>
+          <div className="flex aspect-[1/1.414] w-full">
+            <PickedBackground style={{ color: hex }} />
           </div>
         </div>
       </div>
