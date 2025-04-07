@@ -21,3 +21,11 @@ export interface PersonalInformationItem {
     level: string,
     location: string
   }
+
+  export interface ExperienceItem {
+    company: string,
+    duration: string,
+    position: string,
+    location: string,
+    description: string,
+  }
