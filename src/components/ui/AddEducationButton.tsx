@@ -1,15 +1,20 @@
-function AddEducationButton() {
+// src/components/ui/AddEducationButton.tsx
 
-    function handleAddEducationField() {
-        
-    }
-
+type AddEducationButtonProps = {
+    onClick: () => void;
+  };
+  
+  export default function AddEducationButton({
+    onClick,
+  }: AddEducationButtonProps) {
     return (
-        <button className="flex items-center p-2 pl-4 pr-4
-        border-2 border-black rounded-md bg-white
-    " onClick={handleAddEducationField}>
+      <button
+        onClick={onClick}
+        className="flex items-center p-2 pl-4 pr-4
+                   border-2 border-black rounded-md bg-white"
+      >
         +
-        </button>
-    )
-}
-export default AddEducationButton
+      </button>
+    );
+  }
+  

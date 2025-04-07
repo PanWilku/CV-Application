@@ -18,12 +18,12 @@ function App() {
     email: "",
     phoneNumber: ""
   })
-  const [education, setEducation] = useState<EducationItem>({
+  const [education, setEducation] = useState<EducationItem[]>([{
     schoolName: "",
     duration: "",
     level: "",
     location: ""
-  })
+  }])
 
   return (
 

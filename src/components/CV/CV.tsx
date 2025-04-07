@@ -10,7 +10,7 @@ type props = {
   pickedBackground: BackgroundItem;
   hex: string;
   personalInformation: PersonalInformationItem;
-  education: EducationItem
+  education: EducationItem[]
 }
 
 
@@ -31,11 +31,11 @@ function CV({pickedBackground, hex, personalInformation, education}: props) {
           justify-center items-center">
             <ImgUpload/>
           </div>
-          <div className="flex absolute top-25 p-4 w-full">
-            <EducationComponent education={education} />
-          </div>
-          <div>
-                    {/* education compoennt */}
+          <div className="flex flex-col absolute top-25 p-4 w-full">
+            <h1 className="pb-2 text-[12px] font-bold underline">Education</h1>
+            {education.map((edu, i) => (
+            <EducationComponent key={i} education={edu} />
+            ))}
           </div>
         </div>
       </div>
