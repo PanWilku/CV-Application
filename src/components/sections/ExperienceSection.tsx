@@ -61,13 +61,13 @@ export default function ExperienceSection({
                 className={`flex flex-col gap-2 rounded-md p-2`}
               >
                 <div className="flex w-full gap-2 border-2 border-gray-400
-                    focus-within:border-sky-500 p-1 rounded-md">
+                    focus-within:border-sky-500 p-1 rounded-md ">
                   <label htmlFor="company">Company:</label>
                   <input
                     id="company"
                     type="text"
-                    placeholder="Massachusetts Institute of Technology"
-                    className="outline-none flex-grow"
+                    placeholder="Google"
+                    className="outline-none flex-grow w-full"
                     onChange={(e) => handleChange(idx, e)}
                     value={exp.company}
                   />
@@ -78,8 +78,8 @@ export default function ExperienceSection({
                   <input
                     id="position"
                     type="text"
-                    placeholder="Highschool"
-                    className="outline-none flex-grow"
+                    placeholder="Intern"
+                    className="outline-none flex-grow w-full"
                     onChange={(e) => handleChange(idx, e)}
                     value={exp.position}
                   />
@@ -91,7 +91,7 @@ export default function ExperienceSection({
                     id="duration"
                     type="text"
                     placeholder=""
-                    className="outline-none flex-grow"
+                    className="outline-none flex-grow w-full"
                     onChange={(e) => handleChange(idx, e)}
                     value={exp.duration}
                   />
@@ -102,7 +102,7 @@ export default function ExperienceSection({
                   <input
                     id="location"
                     type="text"
-                    className="outline-none flex-grow"
+                    className="outline-none flex-grow w-full"
                     onChange={(e) => handleChange(idx, e)}
                     value={exp.location}
                   />
@@ -113,7 +113,7 @@ export default function ExperienceSection({
                   <input
                     id="description"
                     type="text"
-                    className="outline-none flex-grow"
+                    className="outline-none flex-grow w-full"
                     onChange={(e) => handleChange(idx, e)}
                     value={exp.description}
                   />

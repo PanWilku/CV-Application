@@ -2,7 +2,6 @@ import BackgroundComponent from "./BackgroundComponent"
 import { BackgroundItem, ExperienceItem } from "../../types"
 import GeneralInformationComponent from "./GeneralInformationComponent"
 import { PersonalInformationItem } from "../../types"
-import ImgUpload from "./ImageUpload"
 import { EducationItem } from "../../types"
 import EducationComponent from "./EducationComponent"
 import ExperienceComponent from "./ExperienceComponent"
@@ -13,10 +12,11 @@ type props = {
   personalInformation: PersonalInformationItem;
   education: EducationItem[];
   experience: ExperienceItem[];
+  img: string
 }
 
 
-function CV({pickedBackground, hex, personalInformation, education, experience}: props) {
+function CV({pickedBackground, hex, personalInformation, education, experience, img}: props) {
     return (
         <div className="flex justify-center items-center">
         {/* ADJUST SIZE OF CV HERE */}
@@ -26,13 +26,15 @@ function CV({pickedBackground, hex, personalInformation, education, experience}:
             <BackgroundComponent color={hex} Svg={pickedBackground.svg} />
           </div>
   
-          <div className="flex h-1/5 w-full gap-25">
-              <div className="flex inset-0 p-4">
+          <div className="flex h-1/5 w-full gap-10">
+              <div className="flex inset-0 p-4 w-full overflow-hidden">
                 <GeneralInformationComponent personalInformation={personalInformation} />
               </div>
-              <div className="flex aspect-[1/1.414] h-26 border-2 mt-4
-              justify-center items-center">
-                <ImgUpload/>
+              <div className="flex w-full justify-center">
+                <div className="flex aspect-[1/1.414] h-26 border-2 mt-4
+                justify-center items-center">
+                  <img className="w-full h-full object-cover" src={img}></img>
+                </div>
               </div>
           </div>
           <div className="flex flex-col w-full h-fit">

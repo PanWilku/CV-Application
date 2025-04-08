@@ -80,7 +80,7 @@ export default function EducationSection({
                   id="level"
                   type="text"
                   placeholder="Highschool"
-                  className="outline-none flex-grow"
+                  className="outline-none flex-grow w-full"
                   onChange={(e) => handleChange(idx, e)}
                   value={edu.level}
                 />
@@ -92,7 +92,7 @@ export default function EducationSection({
                   id="duration"
                   type="text"
                   placeholder=""
-                  className="outline-none flex-grow"
+                  className="outline-none flex-grow w-full"
                   onChange={(e) => handleChange(idx, e)}
                   value={edu.duration}
                 />
@@ -103,7 +103,7 @@ export default function EducationSection({
                 <input
                   id="location"
                   type="text"
-                  className="outline-none flex-grow"
+                  className="outline-none flex-grow w-full"
                   onChange={(e) => handleChange(idx, e)}
                   value={edu.location}
                 />
