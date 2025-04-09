@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Colorful from '@uiw/react-color-colorful';
 import { FunctionComponent, SVGProps } from "react";
 

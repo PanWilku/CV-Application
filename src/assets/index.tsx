@@ -13,6 +13,9 @@ import Stripes2 from './stripes2.svg?react';
 import stripes3 from './stripes3.svg';
 import Stripes3 from './stripes3.svg?react';
 
+import blank from "./blank.svg";
+import Blank from "./blank.svg?react";
+
 import { BackgroundItem } from '../types';
 
 
@@ -46,6 +49,12 @@ const backgrounds: BackgroundItem[] = [{
   svg: Stripes3,
   name: "Stripes3"
 },
+{
+  id: 6,
+  image: blank,
+  svg: Blank,
+  name: "Blank"
+}
 ];
 
 export {

@@ -13,7 +13,7 @@ function MyDropzone({setImage}: dropZoneProps) {
   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
   return (
-    <div {...getRootProps()}>
+    <div className='cursor-pointer' {...getRootProps()}>
       <input {...getInputProps()} />
       {
         isDragActive ?
