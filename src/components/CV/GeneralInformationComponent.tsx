@@ -11,7 +11,7 @@ function GeneralInformationComponent({personalInformation}: GeneralInformationCo
         <>
             <div className="flex flex-col">
                 <h1 className=" pb-2 text-[12px] font-bold underline">Personal Information</h1>
-                <div className="flex flex-col text-[8px]">
+                <div className="flex flex-col text-xs">
                     <div>
                         Name: {personalInformation.name}
                     </div>

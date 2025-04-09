@@ -17,7 +17,6 @@ type BackgroundPickerProps = {
 
 function BackgroundPicker({ backgrounds, pickedBackground, setPickedBackground}: BackgroundPickerProps) {
   useEffect(() => {
-    console.log("Picked background changed to:", pickedBackground.name);
   }, [pickedBackground]);
 
   const [activeId, setActiveId] = useState<number>(pickedBackground.id);

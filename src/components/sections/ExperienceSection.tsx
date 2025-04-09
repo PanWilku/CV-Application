@@ -50,7 +50,7 @@ export default function ExperienceSection({
         <div
           className="transition-all duration-500 ease-in-out overflow-y-auto"
           style={{
-            maxHeight: isExpanded ? "200px" : "0px",
+            maxHeight: isExpanded ? "350px" : "0px",
             opacity: isExpanded ? 1 : 0,
           }}
         >

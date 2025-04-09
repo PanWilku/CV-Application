@@ -51,7 +51,7 @@ export default function EducationSection({
       <div
         className="transition-all duration-500 ease-in-out overflow-y-auto"
         style={{
-          maxHeight: isExpanded ? "200px" : "0px",
+          maxHeight: isExpanded ? "350px" : "0px",
           opacity: isExpanded ? 1 : 0,
         }}
       >
@@ -61,14 +61,14 @@ export default function EducationSection({
               key={idx}
               className={`flex flex-col gap-2 rounded-md p-2`}
             >
-              <div className="flex w-full gap-2 border-2 border-gray-400
-                  focus-within:border-sky-500 p-1 rounded-md">
-                <label htmlFor="schoolName">School Name:</label>
+              <div className="flex w-full border-2 border-gray-400
+                  focus-within:border-sky-500 p-1 rounded-md ">
+                <label className="flex shrink-0 pr-2" htmlFor="schoolName">School Name:</label>
                 <input
                   id="schoolName"
                   type="text"
                   placeholder="Massachusetts Institute of Technology"
-                  className="outline-none flex-grow"
+                  className="flex outline-none flex-grow w-full"
                   onChange={(e) => handleChange(idx, e)}
                   value={edu.schoolName}
                 />

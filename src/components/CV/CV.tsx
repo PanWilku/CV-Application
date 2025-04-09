@@ -18,9 +18,9 @@ type props = {
 
 function CV({pickedBackground, hex, personalInformation, education, experience, img}: props) {
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center lg:h-full lg:w-full">
         {/* ADJUST SIZE OF CV HERE */}
-        <div className="flex flex-col overflow-auto relative aspect-[1/1.414] min-w-sm w-sm max-w-[600px]">
+        <div className="flex flex-col overflow-auto relative aspect-[1/1.414] min-w-sm max-w-[600px] w-full">
           
           <div className="absolute inset-0 -z-10 border-2">
             <BackgroundComponent color={hex} Svg={pickedBackground.svg} />
@@ -39,13 +39,13 @@ function CV({pickedBackground, hex, personalInformation, education, experience, 
           </div>
           <div className="flex flex-col w-full h-fit">
               <div className="flex flex-col p-2 pl-4 pr-4 w-full">
-                <h1 className="pb-2 text-[12px] font-bold underline">Education</h1>
+                <h1 className="pb-2 text-sm font-bold underline">Education</h1>
                 {education.map((edu, i) => (
                 <EducationComponent key={i} education={edu} />
                 ))}
               </div>
               <div className="flex flex-col p-2 pl-4 pr-4 w-full">
-                <h1 className="pb-2 text-[12px] font-bold underline">Experience</h1>
+                <h1 className="pb-2 text-sm font-bold underline">Experience</h1>
                 {experience.map((exp, i) => (
                 <ExperienceComponent key={i} experience={exp} />
                 ))}

@@ -53,27 +53,29 @@ function App() {
   return (
 
     <>
-    <div className='flex h-screen border-2 flex-col overflow-y-auto min-w-sm'>
-      <div className='flex flex-col bg-blue-100
-       w-full p-6 justify-center h-fit'>
-        <BackgroundSectionContainer pickedBackground={pickedBackground} setPickedBackground={setPickedBackground} hex={hex} setHex={setHex}/>
-      </div>
-      <div className='flex flex-col bg-blue-100
-       w-full p-6 justify-center h-fit'>
-        <GeneralInformationContainer info={personalInformation} setInfo={setPersonalInformation}/>
-      </div>
-      <div className='flex flex-col bg-blue-100
-       w-full p-6 justify-center h-fit'>
-        <EducationSection education={education} setEducation={setEducation}/>
-      </div>
-      <div className='flex flex-col bg-blue-100
-       w-full p-6 justify-center h-fit'>
-        <ExperienceSection experience={experience} setExperience={setExperience}/>
-      </div>
-      <div className='flex w-full justify-center'>
+    <div className='flex h-screen border-2 flex-col lg:flex-row overflow-y-auto min-w-sm'>
+      <div className='flex flex-col lg:bg-blue-100 lg:w-2/5 lg:overflow-y-auto lg:border-r-2'>
         <div className='flex flex-col bg-blue-100
-         w-50 m-6 p-4 rounded-md justify-center h-fit transition delay-100 duration-300 ease-in-out hover:bg-blue-400'>
-          <MyDropzone setImage={setImage}/>
+         w-full p-6 justify-center h-fit'>
+          <BackgroundSectionContainer pickedBackground={pickedBackground} setPickedBackground={setPickedBackground} hex={hex} setHex={setHex}/>
+        </div>
+        <div className='flex flex-col bg-blue-100
+         w-full p-6 justify-center h-fit'>
+          <GeneralInformationContainer info={personalInformation} setInfo={setPersonalInformation}/>
+        </div>
+        <div className='flex flex-col bg-blue-100
+         w-full p-6 justify-center h-fit'>
+          <EducationSection education={education} setEducation={setEducation}/>
+        </div>
+        <div className='flex flex-col bg-blue-100
+         w-full p-6 justify-center h-fit'>
+          <ExperienceSection experience={experience} setExperience={setExperience}/>
+        </div>
+        <div className='flex w-full justify-center'>
+          <div className='flex flex-col bg-blue-300
+           w-50 m-6 p-4 rounded-md justify-center h-fit transition delay-100 duration-300 ease-in-out hover:bg-blue-400'>
+            <MyDropzone setImage={setImage}/>
+          </div>
         </div>
       </div>
       <div className=' w-full h-full p-12'>

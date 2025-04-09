@@ -54,7 +54,7 @@ function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         <div
           className={`transition-all duration-500 ease-in-out overflow-y-auto`}
           style={{
-            maxHeight: isExpanded ? "200px" : "0px",
+            maxHeight: isExpanded ? "300px" : "0px",
             opacity: isExpanded ? 1 : 0,
           }}
         >
@@ -63,28 +63,28 @@ function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
                 focus-within:border-sky-500`}>
                 <label htmlFor="name">Name:</label>
                 <input 
-                id="name" type="text" placeholder="John" className="outline-none"
+                id="name" type="text" placeholder="John" className="flex outline-none flex-grow w-full"
                 onChange={handleChange} value={info.name}></input>
             </div>
             <div className={`flex w-full gap-2 border-2 rounded-md p-2 border-gray-400
                 focus-within:border-sky-500`}>
                 <label htmlFor="name">Surname:</label>
                 <input 
-                id="surname" type="text" placeholder="Wick" className="outline-none"
+                id="surname" type="text" placeholder="Wick" className="flex outline-none flex-grow w-full"
                 onChange={handleChange} value={info.surname}></input>
             </div>
             <div className={`flex w-full gap-2 border-2 rounded-md p-2 border-gray-400
                 focus-within:border-sky-500`}>
                 <label htmlFor="name">Email:</label>
                 <input
-                id="email" type="text" placeholder="john.wick@gmail.com" className="outline-none"
+                id="email" type="text" placeholder="john.wick@gmail.com" className="flex outline-none flex-grow w-full"
                 onChange={handleChange} value={info.email}></input>
             </div>
             <div className={`flex w-full gap-2 border-2 rounded-md p-2 border-gray-400
                 focus-within:border-sky-500`}>
-                <label htmlFor="name">Phone Number:</label>
+                <label className="flex shrink-0 pr-2" htmlFor="name">Phone Number:</label>
                 <input
-                id="phoneNumber" type="text" className="outline-none"
+                id="phoneNumber" type="text" className="flex outline-none flex-grow w-full"
                 onChange={handleChange} value={info.phoneNumber}></input>
             </div>
           </div>

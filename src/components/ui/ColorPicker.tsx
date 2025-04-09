@@ -20,7 +20,6 @@ function ColorPicker({ pickedBackground: PickedBackground, hex, setHex }: ColorP
           color={hex}
           onChange={(color) => {
             setHex(color.hex);
-            console.log(color.hex);
           }}
         />
         <div className='flex border-2 aspect-[1/1.414] w-1/2'>
