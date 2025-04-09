@@ -14,7 +14,7 @@ function ColorPicker({ pickedBackground: PickedBackground, hex, setHex }: ColorP
 
   return (
     <>
-      <div className='flex flex-col gap-10 items-center'>
+      <div className='flex flex-col gap-10 items-center bg-sky-200 h-full w-full'>
         <Colorful
           color={hex}
           onChange={(color) => {

@@ -85,7 +85,7 @@ function BackgroundSectionContainer({pickedBackground, setPickedBackground, hex,
 
       {showColorPicker && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-white p-8 m-6 rounded-xl shadow-lg relative h-fit w-3/4 overflow-y-auto">
+          <div className="bg-white flex p-8 m-6 rounded-xl shadow-lg relative h-fit w-3/4 lg:w-3/5 max-w[1920px]">
             <button
               onClick={closePickers}
               className="absolute top-2 right-2 text-gray-500 hover:text-black text-xl"
