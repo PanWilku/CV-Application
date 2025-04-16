@@ -54,7 +54,7 @@ function BackgroundSectionContainer({pickedBackground, setPickedBackground, hex,
             opacity: isExpanded ? 1 : 0,
           }}
         >
-          <ul className="flex justify-center gap-4 pl-4 pr-4 pt-2 pb-2">
+          <ul className="flex justify-center gap-4 pl-4 pr-4 pt-2 pb-2 flex-wrap">
             <li>
               <Button value={"Change Background"} onClick={handleBackgroundPicker} />
             </li>
