@@ -14,15 +14,15 @@ function ColorPicker({ pickedBackground: PickedBackground, hex, setHex }: ColorP
 
   return (
     <>
-      <div className='flex flex-col gap-10 items-center bg-sky-200 h-full w-full'>
+      <div className='flex flex-col gap-10 items-center h-full max-h-fit max-w-fit'>
         <Colorful
           color={hex}
           onChange={(color) => {
             setHex(color.hex);
           }}
         />
-        <div className='flex border-2 aspect-[1/1.414] w-1/2'>
-          <div className="flex aspect-[1/1.414] w-full">
+        <div className='flex aspect-[1/1.414] w-fit max-w-fit max-h-fit max-sm:w-3/4'>
+          <div className="flex aspect-[1/1.414] w-fit max-h-fit border-2">
             <PickedBackground style={{ color: hex }} />
           </div>
         </div>
